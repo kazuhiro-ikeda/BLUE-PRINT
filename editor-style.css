@@ -1,0 +1,84 @@
+@charset "utf-8";
+/*//////////////////////////////////////////　投稿：ビジュアルエディタ用　//////////////////////////////////////////*/
+
+/* ビジュアルリッチエディタのスタイル 　<div class="single-content"><?php the_content(); ?></div> */
+* {
+		font-family: Meiryo, メイリオ, 'MS Pゴシック', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
+}
+h1 {
+	font-size: 26px;
+	font-size: 2.6rem;
+	line-height: 1.1538;
+	margin-top: 1.8462em;
+	margin-bottom: 0.9231em;
+}
+h2 {
+	font-size: 22px;
+	font-size: 2.2rem;
+	line-height: 1.3636;
+	margin-top: 2.1818em;
+	margin-bottom: 1.0909em;
+}
+h3 {
+	font-size: 18px;
+	font-size: 1.8rem;
+	line-height: 1.3333;
+	margin-top: 2.6667em;
+	margin-bottom: 1.3333em;
+}
+h4, h5, h6 {
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.2;
+	margin-top: 3.2em;
+	margin-bottom: 1.6em;
+}
+p {
+	font-size: 15px;
+	line-height: 200%;
+	margin-bottom: 20px;
+}
+
+p {
+	clear: both;
+}
+
+ul, ol {
+	margin: 20px 0;
+	clear: both;
+}
+
+/* リスト */
+.single-content ul {
+	list-style-type: circle;
+	line-height: 225%;
+	margin-bottom: 20px;
+}
+
+.single-content a {
+	color: #709ae8;
+}
+.single-content a:hover {
+	text-decoration: underline;
+}
+
+
+/* アライン */
+.alignleft {
+	display: inline;
+	float: left;
+	padding-right: 10px;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	padding-left: 10px;
+}
+
+.aligncenter {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+

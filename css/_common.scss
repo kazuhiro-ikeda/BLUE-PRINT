@@ -1,0 +1,407 @@
+@charset "utf-8";
+$viewport: 640px;
+$base: #333;
+$insert: #799ECB;
+$toggle: #799ECB;
+
+$游ゴシック: "游ゴシック", YuGothic,'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+$游明朝: "游明朝", "YuMincho", serif, "ヒラギノ明朝 ProN W6", "HiraMinProN-W6";
+$メイリオ: Meiryo, メイリオ, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
+$ヒラギノ: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+$heading_line-height: 125%;
+
+//extend
+.denwa {
+	.tel {
+		@media (max-width: $viewport) {
+			display: none;
+		}
+	}
+	
+	.tel_s {
+		display: none;
+		
+		@media (max-width: $viewport) {
+			display: inline;
+		}			
+	}
+}
+
+//mixin
+@mixin inner_sec($sec_width: 980px, $sec_width_s: 88vw) {
+	width: $sec_width;
+	margin: 0 auto;
+	
+	@media (max-width: $viewport) {
+		width: $sec_width_s;
+		margin: 0 auto;
+	}
+}
+
+@mixin ttl_svg($height: 100px, $mb: 30px, $mbs: 3vw) {
+	margin: 0 0 $mb;
+	text-align: center;
+	
+	@media (max-width: $viewport) {
+		margin: 0 0 $mbs;
+	}
+	
+	img {
+		width: 980px;
+		height: $height;
+		
+		@media (max-width: $viewport) {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+@mixin svg($x_number: 200px, $y_number: 30px) {
+	img {
+		width: $x_number;
+		height: $y_number;
+		
+		@media (max-width: $viewport) {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+@mixin btn($seconds: .3s, $opacity: .5) {
+	transition: all $seconds;
+				
+	&:hover {
+		opacity: $opacity;
+		
+		@media (max-width: $viewport) {
+			opacity: 1;
+		}
+	}
+}
+
+/*	common
+---------------------------------*/
+
+body {
+	color: $base;
+	font-family: $游ゴシック;
+	font-size: 14px;
+	word-wrap: break-word;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-text-size-adjust: 100%;
+	
+	@media all and (-ms-high-contrast: none) {
+		font-weight: 500;//$游ゴシック
+	}
+	
+	@media screen and (max-width: 1060px) {
+		width: 1060px;
+	}
+
+	@media screen and (max-width: $viewport) {
+		width: 100%;
+		font-size: 3.4vw;
+	}
+}
+
+/* link */
+a {
+	color: $base;
+	text-decoration: none;
+}
+a:active, a:focus {
+   outline:  none;
+}
+
+/* element */
+.image {
+	display: inline;
+	
+	@media (max-width: $viewport) {
+		display: none;
+	}
+}
+
+.image_s {
+	display: none;
+	
+	@media (max-width: $viewport) {
+		display: inline;
+	}
+}
+
+/* adjust anchor */
+.anc {
+	margin-top: -0px;
+    padding-top: 0px;
+}
+
+/* figure */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* heading */
+h1, h2, h3, h4, h5, h6 {}
+
+/* text */
+p {
+	text-align: justify;
+}
+
+/*	clearfix
+---------------------------------*/
+
+/* add parent object */
+.cl:before, .cl:after {
+	content: " ";
+	display: table;
+}
+.cl:after {
+	clear: both;
+}
+.cl {
+ *zoom: 1;
+	display: block;
+}
+
+/*	section
+---------------------------------*/
+
+#main {
+	width: 100%;
+}
+
+#side {}
+
+/*	breads
+---------------------------------*/
+#breads {
+	
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+/*	pagination
+---------------------------------*/
+
+/* wrap */
+.pagination {
+	text-align: center;
+	margin: 60px 0 60px;
+	
+	@media (max-width: $viewport) {
+		margin: 5vw 0 5vw;
+	}
+}
+
+/* heading */
+.screen-reader-text {
+	display: none;
+}
+
+/* wrap */
+.nav-links {
+	overflow: hidden;
+}
+
+/* link */
+a.page-numbers {
+	background-color: $insert;
+	color: white;
+	display: inline-block;
+	margin-right: 15px;
+	padding: 6px 6px 6px;
+}
+
+.nav-links .current {
+	display: inline-block;
+	margin-right: 15px;
+	color: $insert;
+}
+
+.page-numbers.current {
+	display: inline-block;
+	margin-right: 15px;
+	color: $insert;
+}
+
+.nav-links a.next {
+	border: none;
+}
+
+.nav-links a.prev {
+	border: none;
+}
+
+.jsPagination {
+	margin: 60px 0 60px;
+	
+	@media screen and (max-width: $viewport) {
+		margin: 10vw 0 10vw;
+	}
+	
+	ul {
+		text-align: center !important;
+		
+		li {
+			margin-right: 15px;
+			display: inline-block;
+			color: $insert;
+			
+			> button {
+				display: block !important;
+				color: white;
+				background: $insert !important;
+				padding: 6px 6px 6px !important; 
+			}
+		}
+	}
+}
+
+/*	display
+---------------------------------*/
+
+.hide-panel {
+	display: none;
+}
+
+//wrap
+.pc-block {
+	display: block;
+	@media screen and (max-width: $viewport) {
+		display: none;
+	}
+}
+
+.sp-block {
+	display: none;
+	@media screen and (max-width: $viewport) {
+		display: block;
+	}
+}
+
+.pc-inline {
+	display: inline;
+	@media screen and (max-width: $viewport) {
+		display: none;
+	}
+}
+
+.sp-inline {
+	display: none;
+	@media screen and (max-width: $viewport) {
+		display: inline;
+	}
+}
+
+//wrap
+.block_p {
+	display: block;
+	@media screen and (max-width: $viewport) {
+		display: none;
+	}
+}
+
+.block_s {
+	display: none;
+	@media screen and (max-width: $viewport) {
+		display: block;
+	}
+}
+
+.inline_p {
+	display: inline;
+	@media screen and (max-width: $viewport) {
+		display: none;
+	}
+}
+
+.inline_s {
+	display: none;
+	@media screen and (max-width: $viewport) {
+		display: inline;
+	}
+}
+
+//404
+#page_404 {
+	padding: 100px 0 0;
+	
+	@media (max-width: $viewport) {
+		width: 88vw;
+		margin: 0 auto;
+		padding: 20vw 0 20vw;
+	}
+	
+	/*.lead_404 {
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 1.5;
+		margin: 0 0 20px;
+		text-align: center;
+		
+		@media (max-width: $viewport) {
+			font-size: 4.2vw;
+			margin: 0 0 3vw;
+			text-align: left;
+		}
+	}*/
+	
+	.text_404 {
+		line-height: 1.8;
+		text-align: center;
+		margin: 0 0 100px;
+		
+		@media (max-width: $viewport) {
+			text-align: left;
+			margin: 0 0 10vw;
+		}
+	}
+	
+	
+}
+
+.btn_top_404 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 240px;
+	height: 52px;
+	box-sizing: border-box;
+	padding: 0 10px 0 10px;
+	border: 1px solid #000;
+	background: #E6E6E6;
+	line-height: 1;
+	margin: 0 auto 120px;
+	transition: all .5s;
+	
+	@media (max-width: $viewport) {
+		width: 60vw;
+		height: 12vw;
+		padding: 0 0 0 3vw;
+		margin: 0 auto 10vw;
+	}
+	
+	@media all and (-ms-high-contrast: none) {
+		padding: 5px 10px 0 10px;
+	}
+			
+	&:hover {
+		opacity: .5;
+		
+		@media (max-width: $viewport) {
+			opacity: 1;
+		}
+	}
+	
+	&::after {
+		content: "▶︎";
+	}
+}
