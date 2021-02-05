@@ -1,8 +1,7 @@
 @charset "utf-8";
-$viewport: 640px;
+$viewport: 750px;
 $base: #333;
-$insert: #799ECB;
-$toggle: #799ECB;
+$cc: #799ECB;
 
 $游ゴシック: "游ゴシック", YuGothic,'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
 $游明朝: "游明朝", "YuMincho", serif, "ヒラギノ明朝 ProN W6", "HiraMinProN-W6";
@@ -10,55 +9,7 @@ $メイリオ: Meiryo, メイリオ, 'Hiragino Kaku Gothic ProN', 'ヒラギノ�
 $ヒラギノ: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
 $roboto: 'Roboto', sans-serif;
 
-$heading_line-height: 125%;
-
-//extend
-.denwa {
-	.tel {
-		@media (max-width: $viewport) {
-			display: none;
-		}
-	}
-	
-	.tel_s {
-		display: none;
-		
-		@media (max-width: $viewport) {
-			display: inline;
-		}			
-	}
-}
-
 //mixin
-@mixin inner_sec($sec_width: 980px, $sec_width_s: 88vw) {
-	width: $sec_width;
-	margin: 0 auto;
-	
-	@media (max-width: $viewport) {
-		width: $sec_width_s;
-		margin: 0 auto;
-	}
-}
-
-@mixin ttl_svg($height: 100px, $mb: 30px, $mbs: 3vw) {
-	margin: 0 0 $mb;
-	text-align: center;
-	
-	@media (max-width: $viewport) {
-		margin: 0 0 $mbs;
-	}
-	
-	img {
-		width: 980px;
-		height: $height;
-		
-		@media (max-width: $viewport) {
-			width: 100%;
-			height: auto;
-		}
-	}
-}
-
 @mixin svg($x_number: 200px, $y_number: 30px) {
 	img {
 		width: $x_number;
@@ -213,7 +164,7 @@ p {
 
 /* link */
 a.page-numbers {
-	background-color: $insert;
+	background-color: $cc;
 	color: white;
 	display: inline-block;
 	margin-right: 15px;
@@ -223,13 +174,13 @@ a.page-numbers {
 .nav-links .current {
 	display: inline-block;
 	margin-right: 15px;
-	color: $insert;
+	color: $cc;
 }
 
 .page-numbers.current {
 	display: inline-block;
 	margin-right: 15px;
-	color: $insert;
+	color: $cc;
 }
 
 .nav-links a.next {
@@ -253,12 +204,12 @@ a.page-numbers {
 		li {
 			margin-right: 15px;
 			display: inline-block;
-			color: $insert;
+			color: $cc;
 			
 			> button {
 				display: block !important;
 				color: white;
-				background: $insert !important;
+				background: $cc !important;
 				padding: 6px 6px 6px !important; 
 			}
 		}

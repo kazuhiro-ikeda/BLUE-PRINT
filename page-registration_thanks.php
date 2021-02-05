@@ -3,7 +3,7 @@
 <div id="main" <?php post_class(); ?> role="main">
 	<section id="entry" class="form_complete">
 		<div class="inner">
-			<p class="thanks-text insert">この度は、数ある企業の中から弊社へご応募頂きまして <br>誠にありがとうございます。</p>
+			<p class="thanks-text cc">この度は、数ある企業の中から弊社へご応募頂きまして <br>誠にありがとうございます。</p>
 			
 			<p class="thanks-text">これより、エントリーフォーム内容を元に書類選考を進めさせていただきます。 <br><br>
 				結果に関しましては、合否に関わらず<br>

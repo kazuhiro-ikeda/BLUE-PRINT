@@ -18,7 +18,7 @@
 		width: 120px;
 		height: 20px;
 		box-sizing: border-box;
-		background: $insert;
+		background: $cc;
 		font-size: 12px;
 		
 		@media all and (-ms-high-contrast: none) {
@@ -35,7 +35,7 @@
 	.date {
 		display: inline-block;
 		font-size: 13px;
-		color: $insert;
+		color: $cc;
 		font-weight: bold;
 		margin: 0 0 0 10px;
 		
@@ -228,7 +228,7 @@
 		}
 		
 		a {
-			color: $insert;
+			color: $cc;
 			font-weight: bold;
 			
 			&::before {

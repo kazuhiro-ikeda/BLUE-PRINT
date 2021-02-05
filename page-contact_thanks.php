@@ -9,7 +9,7 @@
 		<!-- /.steps_form -->
 		
 		<div class="inner">
-			<p class="thanks-text insert">この度は、お問合せいただきまして<br>誠にありがとうございます。</p>
+			<p class="thanks-text cc">この度は、お問合せいただきまして<br>誠にありがとうございます。</p>
 			
 			<p class="thanks-text">営業日３日以内を目安にご連絡をさしあげますので <br>
 				もうしばらくお待ちくださいませ。 <br><br>
