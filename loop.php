@@ -1,4 +1,4 @@
-		
+
 <article class="box">
 	<a href="<?php the_permalink(); ?>">
 		<figure>
