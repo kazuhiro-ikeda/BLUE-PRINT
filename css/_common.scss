@@ -3,8 +3,8 @@ $viewport: 750px;
 $base: #333;
 $cc: #799ECB;
 
-$游ゴシック: "游ゴシック", YuGothic,'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
-$游明朝: "游明朝", "YuMincho", serif, "ヒラギノ明朝 ProN W6", "HiraMinProN-W6";
+$yugothic: "游ゴシック", YuGothic,'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+$yumincho: "游明朝", "YuMincho", serif, "ヒラギノ明朝 ProN W6", "HiraMinProN-W6";
 $メイリオ: Meiryo, メイリオ, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
 $ヒラギノ: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
 
@@ -38,14 +38,14 @@ $ヒラギノ: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo
 
 body {
 	color: $base;
-	font-family: $游ゴシック;
+	font-family: $yugothic;
 	font-size: 14px;
 	word-wrap: break-word;
 	-webkit-font-smoothing: subpixel-antialiased;
 	-webkit-text-size-adjust: 100%;
 	
 	@media all and (-ms-high-contrast: none) {
-		font-weight: 500;//$游ゴシック
+		font-weight: 500;//$yugothic
 	}
 	
 	@media screen and (max-width: 1060px) {

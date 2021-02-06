@@ -2811,4 +2811,73 @@ select::-ms-expand {
   }
 }
 
+@media print {
+  body.single-case {
+    font-size: 2vw;
+    line-height: 1.5;
+    /*.ttl_page_simple{
+    	display:none;
+    	padding:1em;
+    	box-sizing:border-box;
+    	height:auto;
+    	img{
+    		width:20%;
+    	}
+    }*/
+  }
+  body.single-case header {
+    display: none;
+  }
+  body.single-case .wrap_recruit {
+    padding: 0;
+    margin: 0;
+  }
+  body.single-case .wrap_recruit .wrap_case {
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  body.single-case .wrap_recruit .wrap_case #case {
+    width: 100%;
+    max-width: none;
+  }
+  body.single-case .wrap_recruit .wrap_case #case > .inner > .primary .lead {
+    font-size: 1em;
+  }
+  body.single-case .wrap_recruit .wrap_case #case > .inner > .primary .data.narrow {
+    width: calc(100% - 450px);
+  }
+  body.single-case .wrap_recruit .wrap_case #case > .inner #btn_requirements {
+    display: none;
+  }
+  body.single-case .wrap_recruit .wrap_case #case > .inner #requirements .acf-map {
+    position: relative;
+    height: 40vw !important;
+  }
+  body.single-case .wrap_recruit .wrap_case #case > .inner #requirements .acf-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  body.single-case .wrap_recruit .wrap_case #case > .inner #requirements #mapurl {
+    display: none;
+  }
+  body.single-case .wrap_recruit .wrap_case #case > .inner #btn_entry {
+    display: none;
+  }
+  body.single-case .wrap_recruit .wrap_case #case #historyback {
+    display: none;
+  }
+  body.single-case footer {
+    display: none;
+  }
+  body.single-case .cv_top,
+body.single-case #pagetop {
+    opacity: 0;
+    display: none !important;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
