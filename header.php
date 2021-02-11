@@ -2,29 +2,22 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="google" content="notranslate">
-
 <?php if (is_mobile()) : //smartphone only ?>
 <?php if(is_page( 'entry' ) || is_page( 'contact' )): ?>
 <meta name="viewport" content="width=device-width, user-scalable=no">
-
 <?php else: ?>
 <meta name="viewport" content="width=device-width">
-
 <?php endif; ?>
-			
 <?php else : //pc tablet ?>
 <meta name="viewport" content="width=device-width">
-			
 <?php  endif ; //if_mobile ?>
-
+<meta name="google" content="notranslate">
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 <script src="https://use.fontawesome.com/38e4e444a4.js"></script>
 <link rel="alternate" hreflang="ja" href="<?php the_permalink(); ?>">
 <meta name="format-detection" content="telephone=no">
-
 <?php wp_deregister_script( 'jquery' ); wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', array(), '1.11.0' ); ?>
-
 <title>
 	<?php if(is_singular( 'case' )): ?>
 	<?php the_field( "title_case", $post->ID); ?>｜<?php bloginfo( 'name' ); ?>

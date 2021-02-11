@@ -39,7 +39,7 @@
 	    $('#loop .box').matchHeight();
 	});
 </script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/lightbox.js"></script>
+<script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/slick.js"></script>
 <script>
 	$('.multiple-items').slick({
